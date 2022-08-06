@@ -1,0 +1,179 @@
+:root {
+    --red: rgba(87, 211, 103, 0.81);
+    --red-glow: rgba(87, 211, 211, 0.91);
+    --red-scanline: rgba(94, 204, 103, 0.2);
+    --black-scanline: rgba(1, 1, 1, 0.9);
+    --black-hover-background: rgba(0, 0, 0, 0.25);
+    --blue: #ff0000;
+    --yellow: #29f700;
+    --text-shadow: rgb(255, 0, 0);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+    display: block;
+    font-family: "GinesoSoft-ConMed";
+  }
+  
+  body {
+    
+    background: black;
+    background-image: url('ezgif.com-gif-maker.gif');
+    background-position:500px;
+    background-size: 50%;
+    background-repeat: no-repeat;
+  }
+  
+  .logo {
+    font-family: "Cyberpunk";
+    color: var(--yellow);
+    text-align: center;
+    font-size: 42px;
+    text-shadow: var(--text-shadow) 2px 3px 0px;
+    line-height: 1.5;
+    padding: 25px 0px;
+  }
+  
+  .sublogo {
+    font-family: "GinesoSoft-ConMed";
+    font-size: 24px;
+    color: var(--text-shadow);
+    text-shadow: none;
+    text-align: right;
+    letter-spacing: 24px;
+    padding-right: 15px;
+  }
+  
+  .menu {
+    display: inline-block;
+    margin-left: 0px;
+    width: 400px;
+    height: 100%;
+    box-shadow: 0px 0px 10px green;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0%,
+        var(--red-scanline) 1px,
+        var(--red-scanline) 3px,
+        var(--red-scanline) 5px,
+        var(--red-scanline) 4px,
+        transparent 0.5%
+      ),
+      repeating-linear-gradient(
+        to left,
+        var(--black-scanline) 100%,
+        var(--black-scanline) 100%
+      );
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 0px 25px;
+  }
+  
+  .menu ul li {
+    text-transform: uppercase;
+    cursor: pointer;
+    /* layout */
+    position: relative;
+    padding: 10px;
+    margin: 15px 0px;
+    overflow: hidden;
+    width: 350px;
+    height: 54.5px;
+    clip-path: polygon(350px 0px, 350px 29px, 322px 57px, 0px 57px, 0px 0px);
+  
+    /* font */
+    color: var(--red);
+    font-size: 26px;
+    text-shadow: 0px 0px 3px var(--red-glow);
+  
+    /* Border */
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+    /* Animation */
+    transition: color 1s ease-out;
+    transition: border-color 1s ease-out;
+  }
+  
+  .menu ul li::after {
+    /* Layout */
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    right: -17px;
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+  
+    /* Border */
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+  
+    /* Animation */
+    transition: color 1s ease-out;
+    transition: border-color 1s ease-out;
+  }
+  
+  .menu ul li:hover::after,
+  .menu ul li:hover {
+    color: var(--blue);
+    background: var(--black-hover-background);
+    
+    border-color: var(--blue);
+  
+    transition: color 0.23s linear;
+    transition: border-color 0.23s linear;
+    box-shadow: 0px 0px 50px #ff0000;
+    animation: 1s TP infinite;
+  }
+  a{
+    text-decoration: none;
+  }
+  @keyframes TP {
+    0% {
+        box-shadow: 0px 0px 180px #ff0000;
+    }
+
+    12%{
+        box-shadow: 0px 0px 200px #ff0000 ; 
+    }
+
+    25%{
+        box-shadow: 0px 0px 0px #ff0000; 
+    }
+
+    37%{
+        box-shadow: 0px 0px 180px #ff0000; 
+    }
+
+    50%{
+        box-shadow: 0px 0px 200px #ff0000; 
+    }
+
+    62%{
+        box-shadow: 0px 0px 0px #08c3fc75; 
+    }
+
+    75%{
+        box-shadow:  0px 0px 180px #08c3fc75;
+    }
+
+    87%{
+        box-shadow:  0px 0px 200px #08c3fc75;
+    }
+
+    100% {
+        box-shadow:  0px 0px 0px #08c3fc75;
+    }
+
+}
+ 
